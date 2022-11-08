@@ -1,0 +1,48 @@
+# Service config
+service:
+  protocol: http
+  host: 127.0.0.1
+  port: 3020
+  path: /api/v1/lirest/gateway
+
+# Lirest services info
+microservices:
+  # Email service
+  - lirestEmailService:
+      protocol: http
+      host: 127.0.0.1
+      port: 3010
+      path: /api/v1/lirest/email
+      rate-limit:
+        max: 1000
+        windowMs: '1d'
+      cors:
+        origin: '*'
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+        preflightContinue: false
+        optionsSuccessStatus: 204
+  
+  - lirestCustomerService:
+      protocol: http
+      host: 127.0.0.1
+      port: 3011
+      path: /api/v1/lirest/customer
+      rate-limit:
+        max: 1000
+        windowMs: '1d'
+      cors:
+        origin: '*'
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+        preflightContinue: false
+        optionsSuccessStatus: 204
+
+# Authentication and authorization config
+keycloak:
+  realm: lirest
+  auth-server-url: http://
+  bearer-only: false
+  ssl-required: external
+  confidential-port: 0
+  resource: lirest-gateway
+  credentials:
+    secret: oiZ4T26acmPZMBzsOCLhW1Mf5FisPbUk

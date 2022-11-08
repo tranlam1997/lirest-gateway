@@ -1,0 +1,19 @@
+# Service config
+service:
+  protocol: ${LIREST_GATEWAY_PROTOCOL}
+  host: ${LIREST_GATEWAY_HOST}
+  port: ${LIREST_GATEWAY_PORT}
+  path: ${LIREST_GATEWAY_PATH}
+
+# Lirest services info
+microservices:
+  - lirestEmailService:
+      protocol: ${LIREST_EMAIL_SERVICE_PROTOCOL}
+      host: ${LIREST_EMAIL_SERVICE_HOST}
+      port: ${LIREST_EMAIL_SERVICE_PORT}
+      path: ${LIREST_EMAIL_SERVICE_PATH}
+  - lirestCustomerService:
+      protocol: ${LIREST_CUSTOMER_SERVICE_PROTOCOL}
+      host: ${LIREST_CUSTOMER_SERVICE_HOST}
+      port: ${LIREST_CUSTOMER_SERVICE_PORT}
+      path: ${LIREST_CUSTOMER_SERVICE_PATH}
