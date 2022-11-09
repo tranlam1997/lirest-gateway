@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/config': ^3.3.0
+  '@types/cors': ^2.8.12
   '@types/express': ^4.17.14
   '@types/express-session': ^1.17.5
   '@types/node': ^18.11.9
@@ -36,6 +37,7 @@ dependencies:
 
 devDependencies:
   '@types/config': 3.3.0
+  '@types/cors': 2.8.12
   '@types/express': 4.17.14
   '@types/express-session': 1.17.5
   '@types/node': 18.11.9
@@ -181,6 +183,10 @@ packages:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
       '@types/node': 18.11.9
+
+  /@types/cors/2.8.12:
+    resolution: {integrity: sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==}
+    dev: true
 
   /@types/express-serve-static-core/4.17.31:
     resolution: {integrity: sha512-DxMhY+NAsTwMMFHBTtJFNp5qiHKJ7TeqOo23zVEM9alT1Ml27Q3xcTH0xwxn7Q0BbMcVEJOs/7aQtUWupUQN3Q==}

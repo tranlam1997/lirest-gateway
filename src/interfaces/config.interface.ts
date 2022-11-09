@@ -1,4 +1,5 @@
 export interface IMicroservicesConfig {
+  name: string;
   protocol: string;
   host: string;
   port: number;
