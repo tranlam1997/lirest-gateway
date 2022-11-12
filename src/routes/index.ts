@@ -1,10 +1,8 @@
-import config from 'config';
-import { IMicroservicesConfig } from '../interfaces/config.interface';
-import { removePropertiesFromObject } from '../utils/obj-manipulation';
+import { Application } from 'express';
+import customerRoutes from './customer.route';
+import emailRoutes from './email.route';
 
-const microservices = config.get<IMicroservicesConfig[]>('microservices');
-const pathMapping = new Map<string, Omit<IMicroservicesConfig, 'path'>>();
-
-microservices.forEach((service: IMicroservicesConfig) => {
-  pathMapping.set(service.path, removePropertiesFromObject(service, ['path']));
-})
+export default function routes(app: Application) {
+  customerRoutes(app);
+  emailRoutes(app);
+}
