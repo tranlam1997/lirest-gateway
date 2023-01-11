@@ -1,16 +1,18 @@
 import express from 'express';
 import config from 'config';
-import { logger } from '../middlewares//logger';
 import keycloak from '../middlewares/auth';
-import { expressLogger } from '../middlewares/logger';
 import routes from '../routes';
+import { requestTracingMiddleware } from '../middlewares/request-tracing';
+import { expressLogger, logger } from '../common/winston';
 
-(() => {
+export default (() => {
   const app = express();
   const port = config.get<number>('service.port');
-
+  app.use(requestTracingMiddleware())
   app.use(expressLogger);
-  app.use(keycloak.middleware());
+  // app.use(keycloak.middleware());
+  app.get('/', (_req, res) => {
+    res.send('Hello World!')})
   routes(app);
 
   app.listen(port, () => {

@@ -1,8 +1,8 @@
-import { StaticOrigin } from '../interfaces/cors.interface';
+import { StaticOrigin } from '../interfaces/cors';
 import path from 'path';
-import { MicroserviceName } from '../interfaces/mircroservice.interface';
+import { MicroserviceName } from '../interfaces/mircroservice';
 import microservicesURLInfo from '../utils/data-aggregation';
-import { MicroserviceConfig } from '../interfaces/config.interface';
+import { MicroserviceConfig } from '../interfaces/config';
 
 const serviceName = path.basename(__filename).split('.')[0] as MicroserviceName;
 const { protocol, host, port } = microservicesURLInfo.get(serviceName);

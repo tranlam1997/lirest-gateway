@@ -1,8 +1,8 @@
-import { StaticOrigin } from '../interfaces/cors.interface';
+import { StaticOrigin } from '../interfaces/cors';
 import path from 'path';
-import { MicroserviceName } from '../interfaces/mircroservice.interface';
+import { MicroserviceName } from '../interfaces/mircroservice';
 import microservicesURLInfo from '../utils/data-aggregation';
-import { MicroserviceConfig } from '../interfaces/config.interface';
+import { MicroserviceConfig } from '../interfaces/config';
 
 const serviceName = path.basename(__filename).split('.')[0] as MicroserviceName;
 const { protocol, host, port } = microservicesURLInfo.get(serviceName);
@@ -31,7 +31,7 @@ const config: MicroserviceConfig = {
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     preflightContinue: false,
     optionsSuccessStatus: 204,
-  } ,
+  },
   proxy: {
     target: `${protocol}://${host}:${port}`,
     changeOrigin: true,
@@ -43,4 +43,4 @@ const config: MicroserviceConfig = {
   ...microservicesURLInfo.get(serviceName),
 };
 
-export const CustomerService = { name: serviceName, config};
+export const CustomerService = { name: serviceName, config };

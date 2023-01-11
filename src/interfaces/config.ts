@@ -1,4 +1,4 @@
-import { MicroserviceName, MicroserviceProtocol } from "./mircroservice.interface";
+import { MicroserviceName, MicroserviceProtocol } from "./mircroservice";
 import { Options as ProxyOptions } from 'http-proxy-middleware';
 import { Options as RateLimitOptions } from 'express-rate-limit';
 import { CorsOptions } from 'cors';

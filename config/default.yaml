@@ -8,19 +8,22 @@ service:
 # Lirest services info
 microservices:
   # Email service
-  - lirestEmailService:
-      name: 'lirest-email-service'
-      protocol: http
-      host: 127.0.0.1
-      port: 3010
-      path: /api/v1/lirest/email
+  lirestEmailService:
+    name: 'lirest-email-service'
+    protocol: http
+    host: 127.0.0.1
+    port: 3010
+    path: /api/v1/lirest/email
   # Customer service
-  - lirestCustomerService:
-      name: 'lirest-customer-service'
-      protocol: http
-      host: 127.0.0.1
-      port: 3011
-      path: /api/v1/lirest/customer
+  lirestCustomerService:
+    name: 'lirest-customer-service'
+    protocol: http
+    host: 127.0.0.1
+    port: 3011
+    path: /api/v1/lirest/customer
+
+logConfig:
+  logLevel: debug
 
 # Authentication and authorization config
 keycloak:

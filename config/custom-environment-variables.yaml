@@ -1,34 +1,37 @@
 # Service config
 service:
-  protocol: ${LIREST_GATEWAY_PROTOCOL}
-  host: ${LIREST_GATEWAY_HOST}
-  port: ${LIREST_GATEWAY_PORT}
-  path: ${LIREST_GATEWAY_PATH}
+  protocol: LIREST_GATEWAY_PROTOCOL
+  host: LIREST_GATEWAY_HOST
+  port: LIREST_GATEWAY_PORT
+  path: LIREST_GATEWAY_PATH
 
 # Lirest services info
 microservices:
   # Email service
-  - lirestEmailService:
-      name: ${LIREST_EMAIL_SERVICE_NAME}
-      protocol: ${LIREST_EMAIL_SERVICE_PROTOCOL}
-      host: ${LIREST_EMAIL_SERVICE_HOST}
-      port: ${LIREST_EMAIL_SERVICE_PORT}
-      path: ${LIREST_EMAIL_SERVICE_PATH}
+  lirestEmailService:
+    name: LIREST_EMAIL_SERVICE_NAME
+    protocol: LIREST_EMAIL_SERVICE_PROTOCOL
+    host: LIREST_EMAIL_SERVICE_HOST
+    port: LIREST_EMAIL_SERVICE_PORT
+    path: LIREST_EMAIL_SERVICE_PATH
   # Customer service
-  - lirestCustomerService:
-      name: ${LIREST_CUSTOMER_SERVICE_NAME}
-      protocol: ${LIREST_CUSTOMER_SERVICE_PROTOCOL}
-      host: ${LIREST_CUSTOMER_SERVICE_HOST}
-      port: ${LIREST_CUSTOMER_SERVICE_PORT}
-      path: ${LIREST_CUSTOMER_SERVICE_PATH}
+  lirestCustomerService:
+    name: LIREST_CUSTOMER_SERVICE_NAME
+    protocol: LIREST_CUSTOMER_SERVICE_PROTOCOL
+    host: LIREST_CUSTOMER_SERVICE_HOST
+    port: LIREST_CUSTOMER_SERVICE_PORT
+    path: LIREST_CUSTOMER_SERVICE_PATH
+
+logConfig:
+  logLevel: LIREST_GATEWAY_LOG_LEVEL
 
 # Authentication and authorization config
 keycloak:
-  realm: ${KEYCLOAK_REALM}
-  auth-server-url: ${KEYCLOAK_AUTH_SERVER_URL}
-  bearer-only: ${KEYCLOAK_BEARER_ONLY}
-  ssl-required: ${KEYCLOAK_SSL_REQUIRED}
-  confidential-port: ${KEYCLOAK_CONFIDENTIAL_PORT}
-  resource: ${KEYCLOAK_RESOURCE}
+  realm: KEYCLOAK_REALM
+  auth-server-url: KEYCLOAK_AUTH_SERVER_URL
+  bearer-only: KEYCLOAK_BEARER_ONLY
+  ssl-required: KEYCLOAK_SSL_REQUIRED
+  confidential-port: KEYCLOAK_CONFIDENTIAL_PORT
+  resource: KEYCLOAK_RESOURCE
   credentials:
-    secret: ${KEYCLOAK_CREDENTIALS_SECRET}
+    secret: KEYCLOAK_CREDENTIALS_SECRET
