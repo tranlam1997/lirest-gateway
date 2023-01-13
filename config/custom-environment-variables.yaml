@@ -14,24 +14,13 @@ microservices:
     host: LIREST_EMAIL_SERVICE_HOST
     port: LIREST_EMAIL_SERVICE_PORT
     path: LIREST_EMAIL_SERVICE_PATH
-  # Customer service
-  lirestCustomerService:
-    name: LIREST_CUSTOMER_SERVICE_NAME
-    protocol: LIREST_CUSTOMER_SERVICE_PROTOCOL
-    host: LIREST_CUSTOMER_SERVICE_HOST
-    port: LIREST_CUSTOMER_SERVICE_PORT
-    path: LIREST_CUSTOMER_SERVICE_PATH
+  # User service
+  lirestUserService:
+    name: LIREST_USER_SERVICE_NAME
+    protocol: LIREST_USER_SERVICE_PROTOCOL
+    host: LIREST_USER_SERVICE_HOST
+    port: LIREST_USER_SERVICE_PORT
+    path: LIREST_USER_SERVICE_PATH
 
 logConfig:
   logLevel: LIREST_GATEWAY_LOG_LEVEL
-
-# Authentication and authorization config
-keycloak:
-  realm: KEYCLOAK_REALM
-  auth-server-url: KEYCLOAK_AUTH_SERVER_URL
-  bearer-only: KEYCLOAK_BEARER_ONLY
-  ssl-required: KEYCLOAK_SSL_REQUIRED
-  confidential-port: KEYCLOAK_CONFIDENTIAL_PORT
-  resource: KEYCLOAK_RESOURCE
-  credentials:
-    secret: KEYCLOAK_CREDENTIALS_SECRET

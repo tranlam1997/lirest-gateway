@@ -1,8 +1,8 @@
 import { Application } from 'express';
-import customerRoutes from './customer';
+import userRoutes from './user';
 import emailRoutes from './email';
 
 export default function routes(app: Application) {
-  customerRoutes(app);
+  userRoutes(app);
   emailRoutes(app);
 }

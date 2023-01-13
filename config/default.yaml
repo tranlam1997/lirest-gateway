@@ -15,23 +15,12 @@ microservices:
     port: 3010
     path: /api/v1/lirest/email
   # Customer service
-  lirestCustomerService:
-    name: 'lirest-customer-service'
+  lirestUserService:
+    name: 'lirest-user-service'
     protocol: http
     host: 127.0.0.1
     port: 3011
-    path: /api/v1/lirest/customer
+    path: /api/v1/lirest/user
 
 logConfig:
   logLevel: debug
-
-# Authentication and authorization config
-keycloak:
-  realm: lirest
-  auth-server-url: http://
-  bearer-only: false
-  ssl-required: external
-  confidential-port: 0
-  resource: lirest-gateway
-  credentials:
-    secret: oiZ4T26acmPZMBzsOCLhW1Mf5FisPbUk
