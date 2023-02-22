@@ -1,6 +1,6 @@
 # Service config
 service:
-  protocol: LIREST_GATEWAY_PROTOCOL
+  name: lirest-gateway
   host: LIREST_GATEWAY_HOST
   port: LIREST_GATEWAY_PORT
   path: LIREST_GATEWAY_PATH
@@ -21,6 +21,13 @@ microservices:
     host: LIREST_USER_SERVICE_HOST
     port: LIREST_USER_SERVICE_PORT
     path: LIREST_USER_SERVICE_PATH
+  # IAM service
+  lirestIam:
+    name: LIREST_IAM_SERVICE_NAME
+    protocol: LIREST_IAM_SERVICE_PROTOCOL
+    host: LIREST_IAM_SERVICE_HOST
+    port: LIREST_IAM_SERVICE_PORT
+    path: LIREST_IAM_SERVICE_PATH
 
 logConfig:
   logLevel: LIREST_GATEWAY_LOG_LEVEL

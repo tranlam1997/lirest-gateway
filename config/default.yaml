@@ -1,26 +1,25 @@
 # Service config
 service:
-  protocol: http
-  host: 127.0.0.1
+  name: lirest-gateway
+  host: '127.0.0.1'
   port: 3020
-  path: /api/v1/lirest/gateway
+  path: /api/v1/gateway
 
 # Lirest services info
 microservices:
-  # Email service
-  lirestEmailService:
-    name: 'lirest-email-service'
-    protocol: http
-    host: 127.0.0.1
-    port: 3010
-    path: /api/v1/lirest/email
-  # Customer service
+  # User service
   lirestUserService:
-    name: 'lirest-user-service'
+    name: lirest-user-service
     protocol: http
-    host: 127.0.0.1
-    port: 3011
-    path: /api/v1/lirest/user
+    host: '127.0.0.1'
+    port: 3001
+    path: /api/v1/user
+  lirestIam:
+    name: lirest-iam
+    protocol: http
+    host: '127.0.0.1'
+    port: 3030
+    path: /api/v1/iam
 
 logConfig:
   logLevel: debug

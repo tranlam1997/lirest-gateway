@@ -1,2 +1,2 @@
-export * from './lirest-user-service';
-export * from './lirest-email-service';
+export * from './lirest-user-service/config';
+export * from './lirest-iam/config'
